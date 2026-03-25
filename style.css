@@ -1,0 +1,121 @@
+:root {
+    --woodland: #42522D;
+    --yellow-green: #C4DB6B;
+    --malibu-blue: #70B5FD;
+    --old-brick: #891F1F;
+    --walnut: #402D26;
+    --janna: #F2E3D0;
+    --koromiko: #FFBB66;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: var(--janna);
+    color: var(--walnut);
+}
+
+header {
+    background-color: var(--woodland);
+    color: white;
+}
+
+.announcement-bar {
+    background-color: var(--old-brick);
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+#dynamic-bullets {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    animation: scrollBullets 20s linear infinite;
+}
+
+#dynamic-bullets li {
+    white-space: nowrap;
+    padding: 0 40px;
+    font-weight: bold;
+}
+
+@keyframes scrollBullets {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav a {
+    color: var(--yellow-green);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hero {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: white;
+    border-bottom: 5px solid var(--malibu-blue);
+}
+
+.board-members {
+    padding: 40px 5%;
+}
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.member-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    border-top: 4px solid var(--koromiko);
+}
+
+.photo-placeholder {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+}
+
+/* Sliding Banner Footer */
+.member-slider {
+    background: var(--walnut);
+    color: white;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.slider-track {
+    display: flex;
+    width: calc(250px * 6);
+    animation: scroll 15s linear infinite;
+}
+
+.slider-track span {
+    width: 250px;
+    text-align: center;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 3)); }
+}
