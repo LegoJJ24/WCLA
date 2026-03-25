@@ -9,53 +9,33 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     background-color: var(--janna);
     color: var(--walnut);
 }
 
-header {
-    background-color: var(--woodland);
-    color: white;
-}
-
-.announcement-bar {
+.static-alert {
     background-color: var(--old-brick);
-    padding: 5px 0;
-    overflow: hidden;
-}
-
-#dynamic-bullets {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    animation: scrollBullets 20s linear infinite;
-}
-
-#dynamic-bullets li {
-    white-space: nowrap;
-    padding: 0 40px;
-    font-weight: bold;
-}
-
-@keyframes scrollBullets {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 5%;
-    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--woodland);
+    color: white;
 }
 
 nav ul {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     list-style: none;
+    margin: 0;
 }
 
 nav a {
@@ -65,57 +45,73 @@ nav a {
 }
 
 .hero {
-    padding: 60px 5%;
     text-align: center;
-    background-color: white;
-    border-bottom: 5px solid var(--malibu-blue);
+    padding: 80px 10%;
+    background: white;
 }
 
-.board-members {
-    padding: 40px 5%;
+.cta-buttons {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
+
+.btn-primary, .btn-secondary {
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.btn-primary { background: var(--woodland); color: white; }
+.btn-secondary { background: var(--malibu-blue); color: var(--walnut); }
 
 .member-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px 5%;
 }
 
 .member-card {
     background: white;
     padding: 20px;
+    border: 1px solid #ddd;
     text-align: center;
-    border-top: 4px solid var(--koromiko);
 }
 
 .photo-placeholder {
-    width: 100px;
-    height: 100px;
-    background: #ccc;
+    width: 120px;
+    height: 120px;
+    background: #eee;
     border-radius: 50%;
     margin: 0 auto 15px;
 }
 
-/* Sliding Banner Footer */
-.member-slider {
+.member-footer {
+    padding: 40px 5%;
+    background: #fff;
+    border-top: 4px solid var(--malibu-blue);
+}
+
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.logo-item {
+    padding: 20px;
+    background: var(--janna);
+    text-align: center;
+    border: 1px dashed var(--walnut);
+}
+
+.footer-bottom {
     background: var(--walnut);
     color: white;
-    padding: 20px 0;
-    overflow: hidden;
-}
-
-.slider-track {
-    display: flex;
-    width: calc(250px * 6);
-    animation: scroll 15s linear infinite;
-}
-
-.slider-track span {
-    width: 250px;
     text-align: center;
-}
-
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-250px * 3)); }
+    padding: 10px;
 }
